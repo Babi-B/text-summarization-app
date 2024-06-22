@@ -2,6 +2,7 @@ import streamlit as st
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer
+from transformers import pipeline, BartTokenizer, BartForConditionalGeneration
 
 # Function for extractive summarization using sumy
 def extractive_summary(text, num_sentences=3):
